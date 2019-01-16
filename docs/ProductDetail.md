@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **promotions** | [**[PromotionOption]**](PromotionOption.md) | The promotions present on an item  | [optional] 
 **attributes** | [**[ProductAttribute]**](ProductAttribute.md) | The attributes of an item  | [optional] 
 **prices** | [**[ProductPriceOption]**](ProductPriceOption.md) | List of price options for an item  | [optional] 
-**reviews** | [**[ProductReviews]**](ProductReviews.md) | The reviews for an item  | [optional] 
+**reviews** | [**ProductReviews**](ProductReviews.md) |  | [optional] 
 **trade** | [**TradeInformation**](TradeInformation.md) |  | [optional] 
 **skuProperties** | [**[SkuProperty]**](SkuProperty.md) | List of sku properties that correspond to an item  | [optional] 
 

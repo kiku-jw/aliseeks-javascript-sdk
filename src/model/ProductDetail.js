@@ -102,7 +102,7 @@
         obj['prices'] = ApiClient.convertToType(data['prices'], [ProductPriceOption]);
       }
       if (data.hasOwnProperty('reviews')) {
-        obj['reviews'] = ApiClient.convertToType(data['reviews'], [ProductReviews]);
+        obj['reviews'] = ProductReviews.constructFromObject(data['reviews']);
       }
       if (data.hasOwnProperty('trade')) {
         obj['trade'] = TradeInformation.constructFromObject(data['trade']);
@@ -185,8 +185,7 @@
    */
   exports.prototype['prices'] = undefined;
   /**
-   * The reviews for an item 
-   * @member {Array.<module:model/ProductReviews>} reviews
+   * @member {module:model/ProductReviews} reviews
    */
   exports.prototype['reviews'] = undefined;
   /**
