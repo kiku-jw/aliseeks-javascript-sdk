@@ -35,7 +35,7 @@
   /**
    * The SearchItem model module.
    * @module model/SearchItem
-   * @version 0.10.0
+   * @version 0.10.1
    */
 
   /**

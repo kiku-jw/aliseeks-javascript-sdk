@@ -35,7 +35,7 @@
   /**
    * The ProductBulkOption model module.
    * @module model/ProductBulkOption
-   * @version 0.10.0
+   * @version 0.10.1
    */
 
   /**

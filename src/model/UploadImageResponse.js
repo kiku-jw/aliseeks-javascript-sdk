@@ -35,7 +35,7 @@
   /**
    * The UploadImageResponse model module.
    * @module model/UploadImageResponse
-   * @version 0.10.0
+   * @version 0.10.1
    */
 
   /**

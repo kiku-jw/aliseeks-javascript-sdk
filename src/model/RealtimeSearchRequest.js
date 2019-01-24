@@ -35,7 +35,7 @@
   /**
    * The RealtimeSearchRequest model module.
    * @module model/RealtimeSearchRequest
-   * @version 0.10.0
+   * @version 0.10.1
    */
 
   /**

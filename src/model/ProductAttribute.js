@@ -35,7 +35,7 @@
   /**
    * The ProductAttribute model module.
    * @module model/ProductAttribute
-   * @version 0.10.0
+   * @version 0.10.1
    */
 
   /**

@@ -35,7 +35,7 @@
   /**
    * The ImageSearchRequest model module.
    * @module model/ImageSearchRequest
-   * @version 0.10.0
+   * @version 0.10.1
    */
 
   /**

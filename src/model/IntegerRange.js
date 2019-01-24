@@ -35,7 +35,7 @@
   /**
    * The IntegerRange model module.
    * @module model/IntegerRange
-   * @version 0.10.0
+   * @version 0.10.1
    */
 
   /**

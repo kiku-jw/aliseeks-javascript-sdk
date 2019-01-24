@@ -16,32 +16,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/BestSellingSearchItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./BestSellingSearchItem'));
   } else {
     // Browser globals (root is window)
     if (!root.AliseeksApi) {
       root.AliseeksApi = {};
     }
-    root.AliseeksApi.ProductHtmlDescriptionRequest = factory(root.AliseeksApi.ApiClient);
+    root.AliseeksApi.BestSellingSearchResponse = factory(root.AliseeksApi.ApiClient, root.AliseeksApi.BestSellingSearchItem);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, BestSellingSearchItem) {
   'use strict';
 
 
 
   /**
-   * The ProductHtmlDescriptionRequest model module.
-   * @module model/ProductHtmlDescriptionRequest
+   * The BestSellingSearchResponse model module.
+   * @module model/BestSellingSearchResponse
    * @version 0.10.1
    */
 
   /**
-   * Constructs a new <code>ProductHtmlDescriptionRequest</code>.
-   * Get product HTML description request body 
-   * @alias module:model/ProductHtmlDescriptionRequest
+   * Constructs a new <code>BestSellingSearchResponse</code>.
+   * Response body of a best selling search 
+   * @alias module:model/BestSellingSearchResponse
    * @class
    */
   var exports = function() {
@@ -50,27 +50,27 @@
   };
 
   /**
-   * Constructs a <code>ProductHtmlDescriptionRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>BestSellingSearchResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ProductHtmlDescriptionRequest} obj Optional instance to populate.
-   * @return {module:model/ProductHtmlDescriptionRequest} The populated <code>ProductHtmlDescriptionRequest</code> instance.
+   * @param {module:model/BestSellingSearchResponse} obj Optional instance to populate.
+   * @return {module:model/BestSellingSearchResponse} The populated <code>BestSellingSearchResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('productId')) {
-        obj['productId'] = ApiClient.convertToType(data['productId'], 'String');
+      if (data.hasOwnProperty('items')) {
+        obj['items'] = ApiClient.convertToType(data['items'], [BestSellingSearchItem]);
       }
     }
     return obj;
   }
 
   /**
-   * The Product ID 
-   * @member {String} productId
+   * List of best selling products 
+   * @member {Array.<module:model/BestSellingSearchItem>} items
    */
-  exports.prototype['productId'] = undefined;
+  exports.prototype['items'] = undefined;
 
 
 

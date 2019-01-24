@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('searchBestSelling', function() {
+      it('should call searchBestSelling successfully', function(done) {
+        //uncomment below and update the code to test searchBestSelling
+        //instance.searchBestSelling(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('searchByImage', function() {
       it('should call searchByImage successfully', function(done) {
         //uncomment below and update the code to test searchByImage

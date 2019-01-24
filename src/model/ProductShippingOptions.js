@@ -35,7 +35,7 @@
   /**
    * The ProductShippingOptions model module.
    * @module model/ProductShippingOptions
-   * @version 0.10.0
+   * @version 0.10.1
    */
 
   /**
