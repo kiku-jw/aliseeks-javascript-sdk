@@ -35,7 +35,7 @@
   /**
    * The PriceSummary model module.
    * @module model/PriceSummary
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

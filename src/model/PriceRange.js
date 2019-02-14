@@ -35,7 +35,7 @@
   /**
    * The PriceRange model module.
    * @module model/PriceRange
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

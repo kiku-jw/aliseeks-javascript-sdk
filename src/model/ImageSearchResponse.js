@@ -35,7 +35,7 @@
   /**
    * The ImageSearchResponse model module.
    * @module model/ImageSearchResponse
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

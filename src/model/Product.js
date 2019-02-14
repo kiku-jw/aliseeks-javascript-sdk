@@ -35,7 +35,7 @@
   /**
    * The Product model module.
    * @module model/Product
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

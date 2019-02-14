@@ -35,7 +35,7 @@
   /**
    * The SkuPropertyValue model module.
    * @module model/SkuPropertyValue
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

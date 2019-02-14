@@ -35,7 +35,7 @@
   /**
    * The SearchAggregation model module.
    * @module model/SearchAggregation
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

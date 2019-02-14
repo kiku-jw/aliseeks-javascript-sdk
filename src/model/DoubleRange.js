@@ -35,7 +35,7 @@
   /**
    * The DoubleRange model module.
    * @module model/DoubleRange
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

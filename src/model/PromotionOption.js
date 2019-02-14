@@ -35,7 +35,7 @@
   /**
    * The PromotionOption model module.
    * @module model/PromotionOption
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

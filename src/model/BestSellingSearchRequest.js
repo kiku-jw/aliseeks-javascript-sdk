@@ -35,7 +35,7 @@
   /**
    * The BestSellingSearchRequest model module.
    * @module model/BestSellingSearchRequest
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**
