@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ProductDetail', 'model/ProductDetailsRequest', 'model/ProductHtmlDescription', 'model/ProductHtmlDescriptionRequest', 'model/ProductShipping', 'model/ProductShippingRequest', 'model/ProductSkus', 'model/ProductSkusRequest', 'model/WebError'], factory);
+    define(['ApiClient', 'model/Product', 'model/ProductDetail', 'model/ProductDetailsRequest', 'model/ProductHtmlDescription', 'model/ProductHtmlDescriptionRequest', 'model/ProductRequest', 'model/ProductShipping', 'model/ProductShippingRequest', 'model/ProductSkus', 'model/ProductSkusRequest', 'model/WebError'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ProductDetail'), require('../model/ProductDetailsRequest'), require('../model/ProductHtmlDescription'), require('../model/ProductHtmlDescriptionRequest'), require('../model/ProductShipping'), require('../model/ProductShippingRequest'), require('../model/ProductSkus'), require('../model/ProductSkusRequest'), require('../model/WebError'));
+    module.exports = factory(require('../ApiClient'), require('../model/Product'), require('../model/ProductDetail'), require('../model/ProductDetailsRequest'), require('../model/ProductHtmlDescription'), require('../model/ProductHtmlDescriptionRequest'), require('../model/ProductRequest'), require('../model/ProductShipping'), require('../model/ProductShippingRequest'), require('../model/ProductSkus'), require('../model/ProductSkusRequest'), require('../model/WebError'));
   } else {
     // Browser globals (root is window)
     if (!root.AliseeksApi) {
       root.AliseeksApi = {};
     }
-    root.AliseeksApi.ProductsApi = factory(root.AliseeksApi.ApiClient, root.AliseeksApi.ProductDetail, root.AliseeksApi.ProductDetailsRequest, root.AliseeksApi.ProductHtmlDescription, root.AliseeksApi.ProductHtmlDescriptionRequest, root.AliseeksApi.ProductShipping, root.AliseeksApi.ProductShippingRequest, root.AliseeksApi.ProductSkus, root.AliseeksApi.ProductSkusRequest, root.AliseeksApi.WebError);
+    root.AliseeksApi.ProductsApi = factory(root.AliseeksApi.ApiClient, root.AliseeksApi.Product, root.AliseeksApi.ProductDetail, root.AliseeksApi.ProductDetailsRequest, root.AliseeksApi.ProductHtmlDescription, root.AliseeksApi.ProductHtmlDescriptionRequest, root.AliseeksApi.ProductRequest, root.AliseeksApi.ProductShipping, root.AliseeksApi.ProductShippingRequest, root.AliseeksApi.ProductSkus, root.AliseeksApi.ProductSkusRequest, root.AliseeksApi.WebError);
   }
-}(this, function(ApiClient, ProductDetail, ProductDetailsRequest, ProductHtmlDescription, ProductHtmlDescriptionRequest, ProductShipping, ProductShippingRequest, ProductSkus, ProductSkusRequest, WebError) {
+}(this, function(ApiClient, Product, ProductDetail, ProductDetailsRequest, ProductHtmlDescription, ProductHtmlDescriptionRequest, ProductRequest, ProductShipping, ProductShippingRequest, ProductSkus, ProductSkusRequest, WebError) {
   'use strict';
 
   /**
@@ -46,6 +46,54 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+
+    /**
+     * Get products details as an aggregated request from AliExpress in realtime. 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ProductRequest} opts.productRequest The request body of get product 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Product} and HTTP response
+     */
+    this.getProductWithHttpInfo = function(opts) {
+      opts = opts || {};
+      var postBody = opts['productRequest'];
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ApiKeyAuth'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Product;
+
+      return this.apiClient.callApi(
+        '/products', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get products details as an aggregated request from AliExpress in realtime. 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ProductRequest} opts.productRequest The request body of get product 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Product}
+     */
+    this.getProduct = function(opts) {
+      return this.getProductWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**

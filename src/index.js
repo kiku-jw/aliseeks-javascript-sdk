@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Amount', 'model/BestSellingSearchItem', 'model/BestSellingSearchRequest', 'model/BestSellingSearchResponse', 'model/DoubleRange', 'model/ImageSearchCategory', 'model/ImageSearchItem', 'model/ImageSearchRequest', 'model/ImageSearchResponse', 'model/IntegerRange', 'model/NonRealtimeCurrency', 'model/ProductAttribute', 'model/ProductBulkOption', 'model/ProductDetail', 'model/ProductDetailsRequest', 'model/ProductHtmlDescription', 'model/ProductHtmlDescriptionRequest', 'model/ProductPriceOption', 'model/ProductPropertyVariationIdentifier', 'model/ProductReviews', 'model/ProductShipping', 'model/ProductShippingOptions', 'model/ProductShippingRequest', 'model/ProductSku', 'model/ProductSkus', 'model/ProductSkusRequest', 'model/PromotionOption', 'model/RealtimeCurrency', 'model/RealtimeSearchAggregation', 'model/RealtimeSearchItem', 'model/RealtimeSearchRequest', 'model/RealtimeSearchResponse', 'model/SearchAggregation', 'model/SearchItem', 'model/SearchItemFreight', 'model/SearchItemFreightType', 'model/SearchItemSeller', 'model/SearchPriceOption', 'model/SearchRequest', 'model/SearchResponse', 'model/SkuProperty', 'model/SkuPropertyValue', 'model/StringRange', 'model/TimeDuration', 'model/TradeInformation', 'model/UploadImageByUrlRequest', 'model/UploadImageResponse', 'model/WebError', 'api/ProductsApi', 'api/SearchApi'], factory);
+    define(['ApiClient', 'model/Amount', 'model/BestSellingSearchItem', 'model/BestSellingSearchRequest', 'model/BestSellingSearchResponse', 'model/DoubleRange', 'model/ImageSearchCategory', 'model/ImageSearchItem', 'model/ImageSearchRequest', 'model/ImageSearchResponse', 'model/IntegerRange', 'model/NonRealtimeCurrency', 'model/PriceRange', 'model/PriceSummary', 'model/Product', 'model/ProductAttribute', 'model/ProductBulkOption', 'model/ProductDetail', 'model/ProductDetailsRequest', 'model/ProductHtmlDescription', 'model/ProductHtmlDescriptionRequest', 'model/ProductPriceOption', 'model/ProductPromotion', 'model/ProductPropertyVariationIdentifier', 'model/ProductRequest', 'model/ProductRequestComponent', 'model/ProductReviews', 'model/ProductSeller', 'model/ProductShipping', 'model/ProductShippingOptions', 'model/ProductShippingRequest', 'model/ProductSku', 'model/ProductSkus', 'model/ProductSkusRequest', 'model/PromotionOption', 'model/RealtimeCurrency', 'model/RealtimeSearchAggregation', 'model/RealtimeSearchItem', 'model/RealtimeSearchRequest', 'model/RealtimeSearchResponse', 'model/SearchAggregation', 'model/SearchItem', 'model/SearchItemFreight', 'model/SearchItemFreightType', 'model/SearchItemSeller', 'model/SearchPriceOption', 'model/SearchRequest', 'model/SearchResponse', 'model/SkuPriceOption', 'model/SkuPriceOptionProperty', 'model/SkuProperty', 'model/SkuPropertyValue', 'model/StringRange', 'model/TimeDuration', 'model/TradeInformation', 'model/UploadImageByUrlRequest', 'model/UploadImageResponse', 'model/WebError', 'api/ProductsApi', 'api/SearchApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Amount'), require('./model/BestSellingSearchItem'), require('./model/BestSellingSearchRequest'), require('./model/BestSellingSearchResponse'), require('./model/DoubleRange'), require('./model/ImageSearchCategory'), require('./model/ImageSearchItem'), require('./model/ImageSearchRequest'), require('./model/ImageSearchResponse'), require('./model/IntegerRange'), require('./model/NonRealtimeCurrency'), require('./model/ProductAttribute'), require('./model/ProductBulkOption'), require('./model/ProductDetail'), require('./model/ProductDetailsRequest'), require('./model/ProductHtmlDescription'), require('./model/ProductHtmlDescriptionRequest'), require('./model/ProductPriceOption'), require('./model/ProductPropertyVariationIdentifier'), require('./model/ProductReviews'), require('./model/ProductShipping'), require('./model/ProductShippingOptions'), require('./model/ProductShippingRequest'), require('./model/ProductSku'), require('./model/ProductSkus'), require('./model/ProductSkusRequest'), require('./model/PromotionOption'), require('./model/RealtimeCurrency'), require('./model/RealtimeSearchAggregation'), require('./model/RealtimeSearchItem'), require('./model/RealtimeSearchRequest'), require('./model/RealtimeSearchResponse'), require('./model/SearchAggregation'), require('./model/SearchItem'), require('./model/SearchItemFreight'), require('./model/SearchItemFreightType'), require('./model/SearchItemSeller'), require('./model/SearchPriceOption'), require('./model/SearchRequest'), require('./model/SearchResponse'), require('./model/SkuProperty'), require('./model/SkuPropertyValue'), require('./model/StringRange'), require('./model/TimeDuration'), require('./model/TradeInformation'), require('./model/UploadImageByUrlRequest'), require('./model/UploadImageResponse'), require('./model/WebError'), require('./api/ProductsApi'), require('./api/SearchApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Amount'), require('./model/BestSellingSearchItem'), require('./model/BestSellingSearchRequest'), require('./model/BestSellingSearchResponse'), require('./model/DoubleRange'), require('./model/ImageSearchCategory'), require('./model/ImageSearchItem'), require('./model/ImageSearchRequest'), require('./model/ImageSearchResponse'), require('./model/IntegerRange'), require('./model/NonRealtimeCurrency'), require('./model/PriceRange'), require('./model/PriceSummary'), require('./model/Product'), require('./model/ProductAttribute'), require('./model/ProductBulkOption'), require('./model/ProductDetail'), require('./model/ProductDetailsRequest'), require('./model/ProductHtmlDescription'), require('./model/ProductHtmlDescriptionRequest'), require('./model/ProductPriceOption'), require('./model/ProductPromotion'), require('./model/ProductPropertyVariationIdentifier'), require('./model/ProductRequest'), require('./model/ProductRequestComponent'), require('./model/ProductReviews'), require('./model/ProductSeller'), require('./model/ProductShipping'), require('./model/ProductShippingOptions'), require('./model/ProductShippingRequest'), require('./model/ProductSku'), require('./model/ProductSkus'), require('./model/ProductSkusRequest'), require('./model/PromotionOption'), require('./model/RealtimeCurrency'), require('./model/RealtimeSearchAggregation'), require('./model/RealtimeSearchItem'), require('./model/RealtimeSearchRequest'), require('./model/RealtimeSearchResponse'), require('./model/SearchAggregation'), require('./model/SearchItem'), require('./model/SearchItemFreight'), require('./model/SearchItemFreightType'), require('./model/SearchItemSeller'), require('./model/SearchPriceOption'), require('./model/SearchRequest'), require('./model/SearchResponse'), require('./model/SkuPriceOption'), require('./model/SkuPriceOptionProperty'), require('./model/SkuProperty'), require('./model/SkuPropertyValue'), require('./model/StringRange'), require('./model/TimeDuration'), require('./model/TradeInformation'), require('./model/UploadImageByUrlRequest'), require('./model/UploadImageResponse'), require('./model/WebError'), require('./api/ProductsApi'), require('./api/SearchApi'));
   }
-}(function(ApiClient, Amount, BestSellingSearchItem, BestSellingSearchRequest, BestSellingSearchResponse, DoubleRange, ImageSearchCategory, ImageSearchItem, ImageSearchRequest, ImageSearchResponse, IntegerRange, NonRealtimeCurrency, ProductAttribute, ProductBulkOption, ProductDetail, ProductDetailsRequest, ProductHtmlDescription, ProductHtmlDescriptionRequest, ProductPriceOption, ProductPropertyVariationIdentifier, ProductReviews, ProductShipping, ProductShippingOptions, ProductShippingRequest, ProductSku, ProductSkus, ProductSkusRequest, PromotionOption, RealtimeCurrency, RealtimeSearchAggregation, RealtimeSearchItem, RealtimeSearchRequest, RealtimeSearchResponse, SearchAggregation, SearchItem, SearchItemFreight, SearchItemFreightType, SearchItemSeller, SearchPriceOption, SearchRequest, SearchResponse, SkuProperty, SkuPropertyValue, StringRange, TimeDuration, TradeInformation, UploadImageByUrlRequest, UploadImageResponse, WebError, ProductsApi, SearchApi) {
+}(function(ApiClient, Amount, BestSellingSearchItem, BestSellingSearchRequest, BestSellingSearchResponse, DoubleRange, ImageSearchCategory, ImageSearchItem, ImageSearchRequest, ImageSearchResponse, IntegerRange, NonRealtimeCurrency, PriceRange, PriceSummary, Product, ProductAttribute, ProductBulkOption, ProductDetail, ProductDetailsRequest, ProductHtmlDescription, ProductHtmlDescriptionRequest, ProductPriceOption, ProductPromotion, ProductPropertyVariationIdentifier, ProductRequest, ProductRequestComponent, ProductReviews, ProductSeller, ProductShipping, ProductShippingOptions, ProductShippingRequest, ProductSku, ProductSkus, ProductSkusRequest, PromotionOption, RealtimeCurrency, RealtimeSearchAggregation, RealtimeSearchItem, RealtimeSearchRequest, RealtimeSearchResponse, SearchAggregation, SearchItem, SearchItemFreight, SearchItemFreightType, SearchItemSeller, SearchPriceOption, SearchRequest, SearchResponse, SkuPriceOption, SkuPriceOptionProperty, SkuProperty, SkuPropertyValue, StringRange, TimeDuration, TradeInformation, UploadImageByUrlRequest, UploadImageResponse, WebError, ProductsApi, SearchApi) {
   'use strict';
 
   /**
@@ -117,6 +117,21 @@
      */
     NonRealtimeCurrency: NonRealtimeCurrency,
     /**
+     * The PriceRange model constructor.
+     * @property {module:model/PriceRange}
+     */
+    PriceRange: PriceRange,
+    /**
+     * The PriceSummary model constructor.
+     * @property {module:model/PriceSummary}
+     */
+    PriceSummary: PriceSummary,
+    /**
+     * The Product model constructor.
+     * @property {module:model/Product}
+     */
+    Product: Product,
+    /**
      * The ProductAttribute model constructor.
      * @property {module:model/ProductAttribute}
      */
@@ -152,15 +167,35 @@
      */
     ProductPriceOption: ProductPriceOption,
     /**
+     * The ProductPromotion model constructor.
+     * @property {module:model/ProductPromotion}
+     */
+    ProductPromotion: ProductPromotion,
+    /**
      * The ProductPropertyVariationIdentifier model constructor.
      * @property {module:model/ProductPropertyVariationIdentifier}
      */
     ProductPropertyVariationIdentifier: ProductPropertyVariationIdentifier,
     /**
+     * The ProductRequest model constructor.
+     * @property {module:model/ProductRequest}
+     */
+    ProductRequest: ProductRequest,
+    /**
+     * The ProductRequestComponent model constructor.
+     * @property {module:model/ProductRequestComponent}
+     */
+    ProductRequestComponent: ProductRequestComponent,
+    /**
      * The ProductReviews model constructor.
      * @property {module:model/ProductReviews}
      */
     ProductReviews: ProductReviews,
+    /**
+     * The ProductSeller model constructor.
+     * @property {module:model/ProductSeller}
+     */
+    ProductSeller: ProductSeller,
     /**
      * The ProductShipping model constructor.
      * @property {module:model/ProductShipping}
@@ -261,6 +296,16 @@
      * @property {module:model/SearchResponse}
      */
     SearchResponse: SearchResponse,
+    /**
+     * The SkuPriceOption model constructor.
+     * @property {module:model/SkuPriceOption}
+     */
+    SkuPriceOption: SkuPriceOption,
+    /**
+     * The SkuPriceOptionProperty model constructor.
+     * @property {module:model/SkuPriceOptionProperty}
+     */
+    SkuPriceOptionProperty: SkuPriceOptionProperty,
     /**
      * The SkuProperty model constructor.
      * @property {module:model/SkuProperty}

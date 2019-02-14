@@ -104,8 +104,10 @@ ApiKeyAuth.apiKey = "YOUR API KEY"
 //ApiKeyAuth.apiKeyPrefix['X-API-CLIENT-ID'] = "Token"
 
 var api = new AliseeksApi.ProductsApi()
-var productDetailsRequest = new AliseeksApi.ProductDetailsRequest(); // {ProductDetailsRequest} The request body to get product details 
-api.getProductDetails(productDetailsRequest).then(function(data) {
+var opts = {
+  'productRequest': new AliseeksApi.ProductRequest() // {ProductRequest} The request body of get product 
+};
+api.getProduct(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -120,6 +122,7 @@ All URIs are relative to *https://api.aliseeks.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AliseeksApi.ProductsApi* | [**getProduct**](docs/ProductsApi.md#getProduct) | **POST** /products | Get products details as an aggregated request from AliExpress in realtime. 
 *AliseeksApi.ProductsApi* | [**getProductDetails**](docs/ProductsApi.md#getProductDetails) | **POST** /products/details | Gets product details from AliExpress in realtime. 
 *AliseeksApi.ProductsApi* | [**getProductHtmlDescription**](docs/ProductsApi.md#getProductHtmlDescription) | **POST** /products/description/html | Get product HTML description from AliExpress in realtime. 
 *AliseeksApi.ProductsApi* | [**getProductShipping**](docs/ProductsApi.md#getProductShipping) | **POST** /products/shipping | Gets product shipping information AliExpress in realtime. 
@@ -144,6 +147,9 @@ Class | Method | HTTP request | Description
  - [AliseeksApi.ImageSearchResponse](docs/ImageSearchResponse.md)
  - [AliseeksApi.IntegerRange](docs/IntegerRange.md)
  - [AliseeksApi.NonRealtimeCurrency](docs/NonRealtimeCurrency.md)
+ - [AliseeksApi.PriceRange](docs/PriceRange.md)
+ - [AliseeksApi.PriceSummary](docs/PriceSummary.md)
+ - [AliseeksApi.Product](docs/Product.md)
  - [AliseeksApi.ProductAttribute](docs/ProductAttribute.md)
  - [AliseeksApi.ProductBulkOption](docs/ProductBulkOption.md)
  - [AliseeksApi.ProductDetail](docs/ProductDetail.md)
@@ -151,8 +157,12 @@ Class | Method | HTTP request | Description
  - [AliseeksApi.ProductHtmlDescription](docs/ProductHtmlDescription.md)
  - [AliseeksApi.ProductHtmlDescriptionRequest](docs/ProductHtmlDescriptionRequest.md)
  - [AliseeksApi.ProductPriceOption](docs/ProductPriceOption.md)
+ - [AliseeksApi.ProductPromotion](docs/ProductPromotion.md)
  - [AliseeksApi.ProductPropertyVariationIdentifier](docs/ProductPropertyVariationIdentifier.md)
+ - [AliseeksApi.ProductRequest](docs/ProductRequest.md)
+ - [AliseeksApi.ProductRequestComponent](docs/ProductRequestComponent.md)
  - [AliseeksApi.ProductReviews](docs/ProductReviews.md)
+ - [AliseeksApi.ProductSeller](docs/ProductSeller.md)
  - [AliseeksApi.ProductShipping](docs/ProductShipping.md)
  - [AliseeksApi.ProductShippingOptions](docs/ProductShippingOptions.md)
  - [AliseeksApi.ProductShippingRequest](docs/ProductShippingRequest.md)
@@ -173,6 +183,8 @@ Class | Method | HTTP request | Description
  - [AliseeksApi.SearchPriceOption](docs/SearchPriceOption.md)
  - [AliseeksApi.SearchRequest](docs/SearchRequest.md)
  - [AliseeksApi.SearchResponse](docs/SearchResponse.md)
+ - [AliseeksApi.SkuPriceOption](docs/SkuPriceOption.md)
+ - [AliseeksApi.SkuPriceOptionProperty](docs/SkuPriceOptionProperty.md)
  - [AliseeksApi.SkuProperty](docs/SkuProperty.md)
  - [AliseeksApi.SkuPropertyValue](docs/SkuPropertyValue.md)
  - [AliseeksApi.StringRange](docs/StringRange.md)
