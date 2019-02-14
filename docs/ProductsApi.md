@@ -4,11 +4,59 @@ All URIs are relative to *https://api.aliseeks.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getProduct**](ProductsApi.md#getProduct) | **POST** /products | Get products details as an aggregated request from AliExpress in realtime. 
 [**getProductDetails**](ProductsApi.md#getProductDetails) | **POST** /products/details | Gets product details from AliExpress in realtime. 
 [**getProductHtmlDescription**](ProductsApi.md#getProductHtmlDescription) | **POST** /products/description/html | Get product HTML description from AliExpress in realtime. 
 [**getProductShipping**](ProductsApi.md#getProductShipping) | **POST** /products/shipping | Gets product shipping information AliExpress in realtime. 
 [**getProductSkus**](ProductsApi.md#getProductSkus) | **POST** /products/variations | Gets product skus / variation information from AliExpress in realtime. 
 
+
+<a name="getProduct"></a>
+# **getProduct**
+> Product getProduct(opts)
+
+Get products details as an aggregated request from AliExpress in realtime. 
+
+### Example
+```javascript
+var AliseeksApi = require('aliseeks-api');
+var defaultClient = AliseeksApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+var apiInstance = new AliseeksApi.ProductsApi();
+var opts = {
+  'productRequest': new AliseeksApi.ProductRequest() // ProductRequest | The request body of get product 
+};
+apiInstance.getProduct(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productRequest** | [**ProductRequest**](ProductRequest.md)| The request body of get product  | [optional] 
+
+### Return type
+
+[**Product**](Product.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="getProductDetails"></a>
 # **getProductDetails**

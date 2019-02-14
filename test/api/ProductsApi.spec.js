@@ -50,6 +50,16 @@
   }
 
   describe('ProductsApi', function() {
+    describe('getProduct', function() {
+      it('should call getProduct successfully', function(done) {
+        //uncomment below and update the code to test getProduct
+        //instance.getProduct(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getProductDetails', function() {
       it('should call getProductDetails successfully', function(done) {
         //uncomment below and update the code to test getProductDetails
