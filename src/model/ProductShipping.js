@@ -35,7 +35,7 @@
   /**
    * The ProductShipping model module.
    * @module model/ProductShipping
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

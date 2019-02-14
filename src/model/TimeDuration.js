@@ -35,7 +35,7 @@
   /**
    * The TimeDuration model module.
    * @module model/TimeDuration
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

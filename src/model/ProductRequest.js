@@ -35,7 +35,7 @@
   /**
    * The ProductRequest model module.
    * @module model/ProductRequest
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

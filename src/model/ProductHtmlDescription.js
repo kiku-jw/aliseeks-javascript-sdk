@@ -35,7 +35,7 @@
   /**
    * The ProductHtmlDescription model module.
    * @module model/ProductHtmlDescription
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

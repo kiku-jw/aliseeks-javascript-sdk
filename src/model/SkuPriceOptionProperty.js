@@ -35,7 +35,7 @@
   /**
    * The SkuPriceOptionProperty model module.
    * @module model/SkuPriceOptionProperty
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

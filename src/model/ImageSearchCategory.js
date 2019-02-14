@@ -35,7 +35,7 @@
   /**
    * The ImageSearchCategory model module.
    * @module model/ImageSearchCategory
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

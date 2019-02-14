@@ -35,7 +35,7 @@
   /**
    * The StringRange model module.
    * @module model/StringRange
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**

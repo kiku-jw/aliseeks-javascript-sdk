@@ -33,7 +33,7 @@
   /**
    * Search service.
    * @module api/SearchApi
-   * @version 0.10.1
+   * @version 0.10.2
    */
 
   /**
