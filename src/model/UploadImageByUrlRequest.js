@@ -35,7 +35,7 @@
   /**
    * The UploadImageByUrlRequest model module.
    * @module model/UploadImageByUrlRequest
-   * @version 0.10.2
+   * @version 1.0.0-rc.1
    */
 
   /**

@@ -1,0 +1,19 @@
+
+stages:
+  - build
+  - release
+
+build:
+  stage: build
+  image:
+    name: node:10
+  script:
+    - npm pack
+
+release:
+  stage: release
+  when: manual
+  image:
+    name: node:10
+  script:
+    - npm publish

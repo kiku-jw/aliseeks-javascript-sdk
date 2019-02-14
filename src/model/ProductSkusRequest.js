@@ -35,7 +35,7 @@
   /**
    * The ProductSkusRequest model module.
    * @module model/ProductSkusRequest
-   * @version 0.10.2
+   * @version 1.0.0-rc.1
    */
 
   /**

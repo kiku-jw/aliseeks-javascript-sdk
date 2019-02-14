@@ -35,7 +35,7 @@
   /**
    * The SkuPriceOption model module.
    * @module model/SkuPriceOption
-   * @version 0.10.2
+   * @version 1.0.0-rc.1
    */
 
   /**

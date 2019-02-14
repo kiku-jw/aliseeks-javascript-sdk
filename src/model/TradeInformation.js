@@ -35,7 +35,7 @@
   /**
    * The TradeInformation model module.
    * @module model/TradeInformation
-   * @version 0.10.2
+   * @version 1.0.0-rc.1
    */
 
   /**

@@ -35,7 +35,7 @@
   /**
    * The SearchItemSeller model module.
    * @module model/SearchItemSeller
-   * @version 0.10.2
+   * @version 1.0.0-rc.1
    */
 
   /**
