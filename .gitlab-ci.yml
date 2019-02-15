@@ -8,11 +8,12 @@ build:
   image:
     name: node:10
   script:
-    - npm pack
+    - npm test
 
 release:
   stage: release
-  when: manual
+  only:
+    - tags
   image:
     name: node:10
   script:
