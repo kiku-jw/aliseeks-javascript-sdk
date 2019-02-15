@@ -8,6 +8,7 @@ build:
   image:
     name: node:10
   script:
+    - npm i
     - npm test
 
 release:
