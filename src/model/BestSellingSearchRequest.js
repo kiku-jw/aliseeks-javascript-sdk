@@ -167,6 +167,11 @@
      */
     "automotive": "automotive",
     /**
+     * value: "electronics"
+     * @const
+     */
+    "electronics": "electronics",
+    /**
      * value: "men"
      * @const
      */

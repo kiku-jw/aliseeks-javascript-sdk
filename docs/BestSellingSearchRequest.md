@@ -39,6 +39,8 @@ Name | Type | Description | Notes
 
 * `automotive` (value: `"automotive"`)
 
+* `electronics` (value: `"electronics"`)
+
 * `men` (value: `"men"`)
 
 * `women` (value: `"women"`)
