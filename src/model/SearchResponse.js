@@ -35,7 +35,7 @@
   /**
    * The SearchResponse model module.
    * @module model/SearchResponse
-   * @version 1.0.2-rc.1
+   * @version 1.0.3
    */
 
   /**

@@ -35,7 +35,7 @@
   /**
    * The ProductSku model module.
    * @module model/ProductSku
-   * @version 1.0.2-rc.1
+   * @version 1.0.3
    */
 
   /**
@@ -71,6 +71,15 @@
       if (data.hasOwnProperty('price')) {
         obj['price'] = Amount.constructFromObject(data['price']);
       }
+      if (data.hasOwnProperty('discountedPrice')) {
+        obj['discountedPrice'] = Amount.constructFromObject(data['discountedPrice']);
+      }
+      if (data.hasOwnProperty('bulkPrice')) {
+        obj['bulkPrice'] = Amount.constructFromObject(data['bulkPrice']);
+      }
+      if (data.hasOwnProperty('bulkQuantity')) {
+        obj['bulkQuantity'] = ApiClient.convertToType(data['bulkQuantity'], 'Number');
+      }
       if (data.hasOwnProperty('stock')) {
         obj['stock'] = ApiClient.convertToType(data['stock'], 'Number');
       }
@@ -100,6 +109,19 @@
    * @member {module:model/Amount} price
    */
   exports.prototype['price'] = undefined;
+  /**
+   * @member {module:model/Amount} discountedPrice
+   */
+  exports.prototype['discountedPrice'] = undefined;
+  /**
+   * @member {module:model/Amount} bulkPrice
+   */
+  exports.prototype['bulkPrice'] = undefined;
+  /**
+   * The quantity required to use the bulk quantity price 
+   * @member {Number} bulkQuantity
+   */
+  exports.prototype['bulkQuantity'] = undefined;
   /**
    * The stock of the product variation 
    * @member {Number} stock

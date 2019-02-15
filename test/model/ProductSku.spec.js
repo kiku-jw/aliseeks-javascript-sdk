@@ -80,6 +80,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property discountedPrice (base name: "discountedPrice")', function() {
+      // uncomment below and update the code to test the property discountedPrice
+      //var instance = new AliseeksApi.ProductSku();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property bulkPrice (base name: "bulkPrice")', function() {
+      // uncomment below and update the code to test the property bulkPrice
+      //var instance = new AliseeksApi.ProductSku();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property bulkQuantity (base name: "bulkQuantity")', function() {
+      // uncomment below and update the code to test the property bulkQuantity
+      //var instance = new AliseeksApi.ProductSku();
+      //expect(instance).to.be();
+    });
+
     it('should have the property stock (base name: "stock")', function() {
       // uncomment below and update the code to test the property stock
       //var instance = new AliseeksApi.ProductSku();

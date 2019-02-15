@@ -35,7 +35,7 @@
   /**
    * The ImageSearchItem model module.
    * @module model/ImageSearchItem
-   * @version 1.0.2-rc.1
+   * @version 1.0.3
    */
 
   /**
