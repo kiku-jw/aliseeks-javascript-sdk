@@ -35,7 +35,7 @@
   /**
    * The ProductSeller model module.
    * @module model/ProductSeller
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

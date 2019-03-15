@@ -35,7 +35,7 @@
   /**
    * The WebError model module.
    * @module model/WebError
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

@@ -35,7 +35,7 @@
   /**
    * The ProductReview model module.
    * @module model/ProductReview
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

@@ -35,7 +35,7 @@
   /**
    * The ProductShippingRequest model module.
    * @module model/ProductShippingRequest
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

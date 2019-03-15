@@ -35,7 +35,7 @@
   /**
    * The BestSellingSearchItem model module.
    * @module model/BestSellingSearchItem
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

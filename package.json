@@ -1,6 +1,6 @@
 {
   "name": "aliseeks-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "JavaScript client library for the Aliseeks API, AliExpress product information",
   "license": "MIT",
   "main": "src/index.js",

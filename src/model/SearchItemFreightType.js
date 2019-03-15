@@ -35,7 +35,7 @@
   /**
    * The SearchItemFreightType model module.
    * @module model/SearchItemFreightType
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

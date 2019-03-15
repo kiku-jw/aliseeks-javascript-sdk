@@ -33,7 +33,7 @@
   /**
    * Products service.
    * @module api/ProductsApi
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

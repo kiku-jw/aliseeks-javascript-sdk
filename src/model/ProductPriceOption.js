@@ -35,7 +35,7 @@
   /**
    * The ProductPriceOption model module.
    * @module model/ProductPriceOption
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

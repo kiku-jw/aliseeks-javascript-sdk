@@ -35,7 +35,7 @@
   /**
    * The RealtimeSearchItem model module.
    * @module model/RealtimeSearchItem
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

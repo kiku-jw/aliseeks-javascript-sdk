@@ -35,7 +35,7 @@
   /**
    * The ProductSku model module.
    * @module model/ProductSku
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

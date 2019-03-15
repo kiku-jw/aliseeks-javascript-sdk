@@ -35,7 +35,7 @@
   /**
    * The ProductDetail model module.
    * @module model/ProductDetail
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**

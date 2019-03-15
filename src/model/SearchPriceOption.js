@@ -35,7 +35,7 @@
   /**
    * The SearchPriceOption model module.
    * @module model/SearchPriceOption
-   * @version 1.0.3
+   * @version 1.0.4
    */
 
   /**
