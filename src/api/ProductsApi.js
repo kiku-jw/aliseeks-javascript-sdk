@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Product', 'model/ProductDetail', 'model/ProductDetailsRequest', 'model/ProductHtmlDescription', 'model/ProductHtmlDescriptionRequest', 'model/ProductRequest', 'model/ProductShipping', 'model/ProductShippingRequest', 'model/ProductSkus', 'model/ProductSkusRequest', 'model/WebError'], factory);
+    define(['ApiClient', 'model/Product', 'model/ProductDetail', 'model/ProductDetailsRequest', 'model/ProductHtmlDescription', 'model/ProductHtmlDescriptionRequest', 'model/ProductRequest', 'model/ProductReviews', 'model/ProductReviewsRequest', 'model/ProductShipping', 'model/ProductShippingRequest', 'model/ProductSkus', 'model/ProductSkusRequest', 'model/WebError'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Product'), require('../model/ProductDetail'), require('../model/ProductDetailsRequest'), require('../model/ProductHtmlDescription'), require('../model/ProductHtmlDescriptionRequest'), require('../model/ProductRequest'), require('../model/ProductShipping'), require('../model/ProductShippingRequest'), require('../model/ProductSkus'), require('../model/ProductSkusRequest'), require('../model/WebError'));
+    module.exports = factory(require('../ApiClient'), require('../model/Product'), require('../model/ProductDetail'), require('../model/ProductDetailsRequest'), require('../model/ProductHtmlDescription'), require('../model/ProductHtmlDescriptionRequest'), require('../model/ProductRequest'), require('../model/ProductReviews'), require('../model/ProductReviewsRequest'), require('../model/ProductShipping'), require('../model/ProductShippingRequest'), require('../model/ProductSkus'), require('../model/ProductSkusRequest'), require('../model/WebError'));
   } else {
     // Browser globals (root is window)
     if (!root.AliseeksApi) {
       root.AliseeksApi = {};
     }
-    root.AliseeksApi.ProductsApi = factory(root.AliseeksApi.ApiClient, root.AliseeksApi.Product, root.AliseeksApi.ProductDetail, root.AliseeksApi.ProductDetailsRequest, root.AliseeksApi.ProductHtmlDescription, root.AliseeksApi.ProductHtmlDescriptionRequest, root.AliseeksApi.ProductRequest, root.AliseeksApi.ProductShipping, root.AliseeksApi.ProductShippingRequest, root.AliseeksApi.ProductSkus, root.AliseeksApi.ProductSkusRequest, root.AliseeksApi.WebError);
+    root.AliseeksApi.ProductsApi = factory(root.AliseeksApi.ApiClient, root.AliseeksApi.Product, root.AliseeksApi.ProductDetail, root.AliseeksApi.ProductDetailsRequest, root.AliseeksApi.ProductHtmlDescription, root.AliseeksApi.ProductHtmlDescriptionRequest, root.AliseeksApi.ProductRequest, root.AliseeksApi.ProductReviews, root.AliseeksApi.ProductReviewsRequest, root.AliseeksApi.ProductShipping, root.AliseeksApi.ProductShippingRequest, root.AliseeksApi.ProductSkus, root.AliseeksApi.ProductSkusRequest, root.AliseeksApi.WebError);
   }
-}(this, function(ApiClient, Product, ProductDetail, ProductDetailsRequest, ProductHtmlDescription, ProductHtmlDescriptionRequest, ProductRequest, ProductShipping, ProductShippingRequest, ProductSkus, ProductSkusRequest, WebError) {
+}(this, function(ApiClient, Product, ProductDetail, ProductDetailsRequest, ProductHtmlDescription, ProductHtmlDescriptionRequest, ProductRequest, ProductReviews, ProductReviewsRequest, ProductShipping, ProductShippingRequest, ProductSkus, ProductSkusRequest, WebError) {
   'use strict';
 
   /**
@@ -190,6 +190,56 @@
      */
     this.getProductHtmlDescription = function(productHtmlDescriptionRequest) {
       return this.getProductHtmlDescriptionWithHttpInfo(productHtmlDescriptionRequest)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get product reviews from AliExpress in realtime 
+     * @param {module:model/ProductReviewsRequest} productReviewsRequest The request body to get product reviews 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductReviews} and HTTP response
+     */
+    this.getProductReviewsWithHttpInfo = function(productReviewsRequest) {
+      var postBody = productReviewsRequest;
+
+      // verify the required parameter 'productReviewsRequest' is set
+      if (productReviewsRequest === undefined || productReviewsRequest === null) {
+        throw new Error("Missing the required parameter 'productReviewsRequest' when calling getProductReviews");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ApiKeyAuth'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ProductReviews;
+
+      return this.apiClient.callApi(
+        '/products/reviews', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get product reviews from AliExpress in realtime 
+     * @param {module:model/ProductReviewsRequest} productReviewsRequest The request body to get product reviews 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductReviews}
+     */
+    this.getProductReviews = function(productReviewsRequest) {
+      return this.getProductReviewsWithHttpInfo(productReviewsRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

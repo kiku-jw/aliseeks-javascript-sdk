@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**getProduct**](ProductsApi.md#getProduct) | **POST** /products | Get products details as an aggregated request from AliExpress in realtime. 
 [**getProductDetails**](ProductsApi.md#getProductDetails) | **POST** /products/details | Gets product details from AliExpress in realtime. 
 [**getProductHtmlDescription**](ProductsApi.md#getProductHtmlDescription) | **POST** /products/description/html | Get product HTML description from AliExpress in realtime. 
+[**getProductReviews**](ProductsApi.md#getProductReviews) | **POST** /products/reviews | Get product reviews from AliExpress in realtime 
 [**getProductShipping**](ProductsApi.md#getProductShipping) | **POST** /products/shipping | Gets product shipping information AliExpress in realtime. 
 [**getProductSkus**](ProductsApi.md#getProductSkus) | **POST** /products/variations | Gets product skus / variation information from AliExpress in realtime. 
 
@@ -138,6 +139,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProductHtmlDescription**](ProductHtmlDescription.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getProductReviews"></a>
+# **getProductReviews**
+> ProductReviews getProductReviews(productReviewsRequest)
+
+Get product reviews from AliExpress in realtime 
+
+### Example
+```javascript
+var AliseeksApi = require('aliseeks-api');
+var defaultClient = AliseeksApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+var apiInstance = new AliseeksApi.ProductsApi();
+var productReviewsRequest = new AliseeksApi.ProductReviewsRequest(); // ProductReviewsRequest | The request body to get product reviews 
+apiInstance.getProductReviews(productReviewsRequest).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productReviewsRequest** | [**ProductReviewsRequest**](ProductReviewsRequest.md)| The request body to get product reviews  | 
+
+### Return type
+
+[**ProductReviews**](ProductReviews.md)
 
 ### Authorization
 

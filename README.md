@@ -125,6 +125,7 @@ Class | Method | HTTP request | Description
 *AliseeksApi.ProductsApi* | [**getProduct**](docs/ProductsApi.md#getProduct) | **POST** /products | Get products details as an aggregated request from AliExpress in realtime. 
 *AliseeksApi.ProductsApi* | [**getProductDetails**](docs/ProductsApi.md#getProductDetails) | **POST** /products/details | Gets product details from AliExpress in realtime. 
 *AliseeksApi.ProductsApi* | [**getProductHtmlDescription**](docs/ProductsApi.md#getProductHtmlDescription) | **POST** /products/description/html | Get product HTML description from AliExpress in realtime. 
+*AliseeksApi.ProductsApi* | [**getProductReviews**](docs/ProductsApi.md#getProductReviews) | **POST** /products/reviews | Get product reviews from AliExpress in realtime 
 *AliseeksApi.ProductsApi* | [**getProductShipping**](docs/ProductsApi.md#getProductShipping) | **POST** /products/shipping | Gets product shipping information AliExpress in realtime. 
 *AliseeksApi.ProductsApi* | [**getProductSkus**](docs/ProductsApi.md#getProductSkus) | **POST** /products/variations | Gets product skus / variation information from AliExpress in realtime. 
 *AliseeksApi.SearchApi* | [**realtimeSearch**](docs/SearchApi.md#realtimeSearch) | **POST** /search/realtime | Searches AliExpress in realtime 
@@ -161,7 +162,9 @@ Class | Method | HTTP request | Description
  - [AliseeksApi.ProductPropertyVariationIdentifier](docs/ProductPropertyVariationIdentifier.md)
  - [AliseeksApi.ProductRequest](docs/ProductRequest.md)
  - [AliseeksApi.ProductRequestComponent](docs/ProductRequestComponent.md)
+ - [AliseeksApi.ProductReview](docs/ProductReview.md)
  - [AliseeksApi.ProductReviews](docs/ProductReviews.md)
+ - [AliseeksApi.ProductReviewsRequest](docs/ProductReviewsRequest.md)
  - [AliseeksApi.ProductSeller](docs/ProductSeller.md)
  - [AliseeksApi.ProductShipping](docs/ProductShipping.md)
  - [AliseeksApi.ProductShippingOptions](docs/ProductShippingOptions.md)

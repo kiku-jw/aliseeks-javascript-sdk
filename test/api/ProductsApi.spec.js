@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('getProductReviews', function() {
+      it('should call getProductReviews successfully', function(done) {
+        //uncomment below and update the code to test getProductReviews
+        //instance.getProductReviews(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getProductShipping', function() {
       it('should call getProductShipping successfully', function(done) {
         //uncomment below and update the code to test getProductShipping
