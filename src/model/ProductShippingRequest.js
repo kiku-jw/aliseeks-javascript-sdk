@@ -43,10 +43,12 @@
    * Get product fees request body 
    * @alias module:model/ProductShippingRequest
    * @class
+   * @param productId {String} The Product ID 
    */
-  var exports = function() {
+  var exports = function(productId) {
     var _this = this;
 
+    _this['productId'] = productId;
   };
 
   /**

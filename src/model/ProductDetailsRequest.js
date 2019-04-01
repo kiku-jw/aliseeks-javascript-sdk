@@ -43,10 +43,12 @@
    * Get product details request body when fetching product details from AliExpress 
    * @alias module:model/ProductDetailsRequest
    * @class
+   * @param productId {String} The Product ID 
    */
-  var exports = function() {
+  var exports = function(productId) {
     var _this = this;
 
+    _this['productId'] = productId;
   };
 
   /**
