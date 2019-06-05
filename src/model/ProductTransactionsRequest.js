@@ -35,7 +35,7 @@
   /**
    * The ProductTransactionsRequest model module.
    * @module model/ProductTransactionsRequest
-   * @version 1.0.4
+   * @version 1.1.0
    */
 
   /**
