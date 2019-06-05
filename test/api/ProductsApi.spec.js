@@ -110,6 +110,16 @@
         done();
       });
     });
+    describe('getProductTransactions', function() {
+      it('should call getProductTransactions successfully', function(done) {
+        //uncomment below and update the code to test getProductTransactions
+        //instance.getProductTransactions(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

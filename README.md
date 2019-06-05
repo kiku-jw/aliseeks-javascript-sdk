@@ -128,6 +128,7 @@ Class | Method | HTTP request | Description
 *AliseeksApi.ProductsApi* | [**getProductReviews**](docs/ProductsApi.md#getProductReviews) | **POST** /products/reviews | Get product reviews from AliExpress in realtime 
 *AliseeksApi.ProductsApi* | [**getProductShipping**](docs/ProductsApi.md#getProductShipping) | **POST** /products/shipping | Gets product shipping information AliExpress in realtime. 
 *AliseeksApi.ProductsApi* | [**getProductSkus**](docs/ProductsApi.md#getProductSkus) | **POST** /products/variations | Gets product skus / variation information from AliExpress in realtime. 
+*AliseeksApi.ProductsApi* | [**getProductTransactions**](docs/ProductsApi.md#getProductTransactions) | **POST** /products/transactions | Get product transactions from AliExpress in realtime. 
 *AliseeksApi.SearchApi* | [**realtimeSearch**](docs/SearchApi.md#realtimeSearch) | **POST** /search/realtime | Searches AliExpress in realtime 
 *AliseeksApi.SearchApi* | [**search**](docs/SearchApi.md#search) | **POST** /search | Searches AliExpress in non-realtime. Uses the Aliseeks.com datasource which is continually updated from AliExpress. 
 *AliseeksApi.SearchApi* | [**searchBestSelling**](docs/SearchApi.md#searchBestSelling) | **POST** /search/bestSelling | Retrieves best selling products from AliExpress in realtime. 
@@ -172,6 +173,9 @@ Class | Method | HTTP request | Description
  - [AliseeksApi.ProductSku](docs/ProductSku.md)
  - [AliseeksApi.ProductSkus](docs/ProductSkus.md)
  - [AliseeksApi.ProductSkusRequest](docs/ProductSkusRequest.md)
+ - [AliseeksApi.ProductTransaction](docs/ProductTransaction.md)
+ - [AliseeksApi.ProductTransactions](docs/ProductTransactions.md)
+ - [AliseeksApi.ProductTransactionsRequest](docs/ProductTransactionsRequest.md)
  - [AliseeksApi.PromotionOption](docs/PromotionOption.md)
  - [AliseeksApi.RealtimeCurrency](docs/RealtimeCurrency.md)
  - [AliseeksApi.RealtimeSearchAggregation](docs/RealtimeSearchAggregation.md)
