@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Product', 'model/ProductDetail', 'model/ProductDetailsRequest', 'model/ProductHtmlDescription', 'model/ProductHtmlDescriptionRequest', 'model/ProductRequest', 'model/ProductReviews', 'model/ProductReviewsRequest', 'model/ProductShipping', 'model/ProductShippingRequest', 'model/ProductSkus', 'model/ProductSkusRequest', 'model/WebError'], factory);
+    define(['ApiClient', 'model/Product', 'model/ProductDetail', 'model/ProductDetailsRequest', 'model/ProductHtmlDescription', 'model/ProductHtmlDescriptionRequest', 'model/ProductRequest', 'model/ProductReviews', 'model/ProductReviewsRequest', 'model/ProductShipping', 'model/ProductShippingRequest', 'model/ProductSkus', 'model/ProductSkusRequest', 'model/ProductTransactions', 'model/ProductTransactionsRequest', 'model/WebError'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Product'), require('../model/ProductDetail'), require('../model/ProductDetailsRequest'), require('../model/ProductHtmlDescription'), require('../model/ProductHtmlDescriptionRequest'), require('../model/ProductRequest'), require('../model/ProductReviews'), require('../model/ProductReviewsRequest'), require('../model/ProductShipping'), require('../model/ProductShippingRequest'), require('../model/ProductSkus'), require('../model/ProductSkusRequest'), require('../model/WebError'));
+    module.exports = factory(require('../ApiClient'), require('../model/Product'), require('../model/ProductDetail'), require('../model/ProductDetailsRequest'), require('../model/ProductHtmlDescription'), require('../model/ProductHtmlDescriptionRequest'), require('../model/ProductRequest'), require('../model/ProductReviews'), require('../model/ProductReviewsRequest'), require('../model/ProductShipping'), require('../model/ProductShippingRequest'), require('../model/ProductSkus'), require('../model/ProductSkusRequest'), require('../model/ProductTransactions'), require('../model/ProductTransactionsRequest'), require('../model/WebError'));
   } else {
     // Browser globals (root is window)
     if (!root.AliseeksApi) {
       root.AliseeksApi = {};
     }
-    root.AliseeksApi.ProductsApi = factory(root.AliseeksApi.ApiClient, root.AliseeksApi.Product, root.AliseeksApi.ProductDetail, root.AliseeksApi.ProductDetailsRequest, root.AliseeksApi.ProductHtmlDescription, root.AliseeksApi.ProductHtmlDescriptionRequest, root.AliseeksApi.ProductRequest, root.AliseeksApi.ProductReviews, root.AliseeksApi.ProductReviewsRequest, root.AliseeksApi.ProductShipping, root.AliseeksApi.ProductShippingRequest, root.AliseeksApi.ProductSkus, root.AliseeksApi.ProductSkusRequest, root.AliseeksApi.WebError);
+    root.AliseeksApi.ProductsApi = factory(root.AliseeksApi.ApiClient, root.AliseeksApi.Product, root.AliseeksApi.ProductDetail, root.AliseeksApi.ProductDetailsRequest, root.AliseeksApi.ProductHtmlDescription, root.AliseeksApi.ProductHtmlDescriptionRequest, root.AliseeksApi.ProductRequest, root.AliseeksApi.ProductReviews, root.AliseeksApi.ProductReviewsRequest, root.AliseeksApi.ProductShipping, root.AliseeksApi.ProductShippingRequest, root.AliseeksApi.ProductSkus, root.AliseeksApi.ProductSkusRequest, root.AliseeksApi.ProductTransactions, root.AliseeksApi.ProductTransactionsRequest, root.AliseeksApi.WebError);
   }
-}(this, function(ApiClient, Product, ProductDetail, ProductDetailsRequest, ProductHtmlDescription, ProductHtmlDescriptionRequest, ProductRequest, ProductReviews, ProductReviewsRequest, ProductShipping, ProductShippingRequest, ProductSkus, ProductSkusRequest, WebError) {
+}(this, function(ApiClient, Product, ProductDetail, ProductDetailsRequest, ProductHtmlDescription, ProductHtmlDescriptionRequest, ProductRequest, ProductReviews, ProductReviewsRequest, ProductShipping, ProductShippingRequest, ProductSkus, ProductSkusRequest, ProductTransactions, ProductTransactionsRequest, WebError) {
   'use strict';
 
   /**
    * Products service.
    * @module api/ProductsApi
-   * @version 1.0.4
+   * @version 1.1.0
    */
 
   /**
@@ -340,6 +340,56 @@
      */
     this.getProductSkus = function(productSkusRequest) {
       return this.getProductSkusWithHttpInfo(productSkusRequest)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get product transactions from AliExpress in realtime. 
+     * @param {module:model/ProductTransactionsRequest} productTransactionsRequest The request body to get product transactions 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductTransactions} and HTTP response
+     */
+    this.getProductTransactionsWithHttpInfo = function(productTransactionsRequest) {
+      var postBody = productTransactionsRequest;
+
+      // verify the required parameter 'productTransactionsRequest' is set
+      if (productTransactionsRequest === undefined || productTransactionsRequest === null) {
+        throw new Error("Missing the required parameter 'productTransactionsRequest' when calling getProductTransactions");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ApiKeyAuth'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ProductTransactions;
+
+      return this.apiClient.callApi(
+        '/products/transactions', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Get product transactions from AliExpress in realtime. 
+     * @param {module:model/ProductTransactionsRequest} productTransactionsRequest The request body to get product transactions 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductTransactions}
+     */
+    this.getProductTransactions = function(productTransactionsRequest) {
+      return this.getProductTransactionsWithHttpInfo(productTransactionsRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

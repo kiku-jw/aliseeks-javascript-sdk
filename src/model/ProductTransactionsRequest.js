@@ -16,32 +16,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Amount'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Amount'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.AliseeksApi) {
       root.AliseeksApi = {};
     }
-    root.AliseeksApi.SearchItemFreight = factory(root.AliseeksApi.ApiClient, root.AliseeksApi.Amount);
+    root.AliseeksApi.ProductTransactionsRequest = factory(root.AliseeksApi.ApiClient);
   }
-}(this, function(ApiClient, Amount) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
   /**
-   * The SearchItemFreight model module.
-   * @module model/SearchItemFreight
+   * The ProductTransactionsRequest model module.
+   * @module model/ProductTransactionsRequest
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>SearchItemFreight</code>.
-   * Freight information for a search item 
-   * @alias module:model/SearchItemFreight
+   * Constructs a new <code>ProductTransactionsRequest</code>.
+   * Get product transactions request 
+   * @alias module:model/ProductTransactionsRequest
    * @class
    */
   var exports = function() {
@@ -50,34 +50,35 @@
   };
 
   /**
-   * Constructs a <code>SearchItemFreight</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ProductTransactionsRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SearchItemFreight} obj Optional instance to populate.
-   * @return {module:model/SearchItemFreight} The populated <code>SearchItemFreight</code> instance.
+   * @param {module:model/ProductTransactionsRequest} obj Optional instance to populate.
+   * @return {module:model/ProductTransactionsRequest} The populated <code>ProductTransactionsRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('price')) {
-        obj['price'] = Amount.constructFromObject(data['price']);
+      if (data.hasOwnProperty('productId')) {
+        obj['productId'] = ApiClient.convertToType(data['productId'], 'String');
       }
-      if (data.hasOwnProperty('type')) {
-        obj['type'] = ApiClient.convertToType(data['type'], 'String');
+      if (data.hasOwnProperty('page')) {
+        obj['page'] = ApiClient.convertToType(data['page'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * @member {module:model/Amount} price
+   * The AliExpress product ID 
+   * @member {String} productId
    */
-  exports.prototype['price'] = undefined;
+  exports.prototype['productId'] = undefined;
   /**
-   * The freight type 
-   * @member {String} type
+   * The page number of product reviews to retrieve 
+   * @member {Number} page
    */
-  exports.prototype['type'] = undefined;
+  exports.prototype['page'] = undefined;
 
 
 

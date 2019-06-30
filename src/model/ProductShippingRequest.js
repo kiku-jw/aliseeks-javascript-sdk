@@ -35,7 +35,7 @@
   /**
    * The ProductShippingRequest model module.
    * @module model/ProductShippingRequest
-   * @version 1.0.4
+   * @version 1.1.0
    */
 
   /**
@@ -43,10 +43,12 @@
    * Get product fees request body 
    * @alias module:model/ProductShippingRequest
    * @class
+   * @param productId {String} The Product ID 
    */
-  var exports = function() {
+  var exports = function(productId) {
     var _this = this;
 
+    _this['productId'] = productId;
   };
 
   /**

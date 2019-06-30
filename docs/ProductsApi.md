@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getProductReviews**](ProductsApi.md#getProductReviews) | **POST** /products/reviews | Get product reviews from AliExpress in realtime 
 [**getProductShipping**](ProductsApi.md#getProductShipping) | **POST** /products/shipping | Gets product shipping information AliExpress in realtime. 
 [**getProductSkus**](ProductsApi.md#getProductSkus) | **POST** /products/variations | Gets product skus / variation information from AliExpress in realtime. 
+[**getProductTransactions**](ProductsApi.md#getProductTransactions) | **POST** /products/transactions | Get product transactions from AliExpress in realtime. 
 
 
 <a name="getProduct"></a>
@@ -274,6 +275,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProductSkus**](ProductSkus.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getProductTransactions"></a>
+# **getProductTransactions**
+> ProductTransactions getProductTransactions(productTransactionsRequest)
+
+Get product transactions from AliExpress in realtime. 
+
+### Example
+```javascript
+var AliseeksApi = require('aliseeks-api');
+var defaultClient = AliseeksApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+var apiInstance = new AliseeksApi.ProductsApi();
+var productTransactionsRequest = new AliseeksApi.ProductTransactionsRequest(); // ProductTransactionsRequest | The request body to get product transactions 
+apiInstance.getProductTransactions(productTransactionsRequest).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productTransactionsRequest** | [**ProductTransactionsRequest**](ProductTransactionsRequest.md)| The request body to get product transactions  | 
+
+### Return type
+
+[**ProductTransactions**](ProductTransactions.md)
 
 ### Authorization
 

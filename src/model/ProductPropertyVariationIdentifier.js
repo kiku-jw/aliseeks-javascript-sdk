@@ -35,7 +35,7 @@
   /**
    * The ProductPropertyVariationIdentifier model module.
    * @module model/ProductPropertyVariationIdentifier
-   * @version 1.0.4
+   * @version 1.1.0
    */
 
   /**
